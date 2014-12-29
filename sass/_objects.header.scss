@@ -1,0 +1,130 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+#menu-primary .search-form .search-toggle {
+	@include md {
+		background-color: #00BCD4;
+		position: relative;
+		margin-top: -5px;
+		margin-right: -6px;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		@include shadow-z1();
+		    &::before {
+		        color: #fff;
+		        }
+
+		&:hover, &:active, &:focus {
+			@include shadow-z3();
+			}
+	}
+}
+
+#menu-primary .menu-toggle button {
+color: $grey-flat-700;
+box-shadow: none;
+}
+
+#menu-primary {
+	@include shadow-z1();
+}
+
+#menu-primary li a {
+color: rgba( 255, 255, 255, 0.75 );
+background: $grey-100;
+border-color: transparent;
+}
+
+#menu-secondary li a, #menu-secondary .menu-toggle button {
+	color: rgba( 255, 255, 255, 0.75 );
+	background: $color-primary;
+	border-color: transparent;
+}
+
+ul#menu-secondary-items {
+background-color: $color-primary;
+border-radius: 2px;	
+@include md {
+@include shadow-z1();
+	padding-right: 24px;
+	}
+}
+
+#menu-primary, #menu-primary .search-form>div, #footer, .audio-shortcode-wrap, .media-shortcode-extend .media-info, .media-info-toggle, .entry-content .media-info-toggle, .media-info-toggle:hover, .media-info-toggle:focus, .wp-audio-shortcode.mejs-container, .mejs-controls, .mejs-volume-button .mejs-volume-slider, .mejs-overlay-play .mejs-overlay-button::after, .mejs-time-rail .mejs-time-float, .wp-playlist-dark {
+background: $grey-100;
+}
+
+
+#menu-primary li a, #menu-secondary li li a, #menu-primary .menu-toggle button:hover, #menu-primary .menu-toggle button:focus {
+	color: $grey-flat-400;
+
+	&:hover, &:focus, &:active {
+		color: $grey-flat-700;
+	}
+}
+
+
+.ltr #menu-primary ul ul, .ltr #menu-secondary ul ul, .ltr #menu-primary li:hover>ul, .ltr #menu-primary li:focus>ul, .ltr #menu-primary li.focus>ul, .ltr #menu-secondary li:hover>ul, .ltr #menu-secondary li:focus>ul, .ltr #menu-secondary li.focus>ul {
+	@include md {
+		@include shadow-z4();
+	}
+}
+
+.menu li>ul::before {
+	content: none;
+}
+
+#menu-primary li li a, #menu-secondary li li a {
+	@include md {
+background: #fff;
+border: 0;
+	}
+
+}
+
+
+#menu-primary ul ul li a:hover, #menu-secondary ul ul li a:hover, #menu-primary ul ul li a:focus, #menu-secondary ul ul li a:focus {
+background: $grey-200;
+}
+
+
+#menu-primary ul ul {
+top: 47px;
+}
+
+.header-image {
+margin-bottom: 1.5rem;
+position: absolute;
+top: 0;
+}
+
+.home .header-image {
+margin-bottom: 0;
+}
+
+#header{
+position: relative;
+z-index: 1;
+}
+
+#main {
+position: relative;
+}
+
+#menu-secondary {
+position: relative;
+}
+
+#menu-secondary li a {
+font-size: .875rem;
+font-weight: 400;
+letter-spacing: .04em;
+color: #fff;
+}
+
+#menu-primary {
+position: relative;
+z-index: 2;
+}

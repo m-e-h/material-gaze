@@ -1,14 +1,15 @@
 /*
-Theme Name: Material Gaze
-Theme URI: http://martyhelmick.com/
-Author: Marty Helmick
-Author URI: http://martyhelmick.com/
-Description: A clean and minimal child theme for the <a href="http://wordpress.org/themes/stargazer">Stargazer</a> parent theme.
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: Material Gaze
+Theme Name: 	Material Gaze
+Theme URI: 		http://martyhelmick.com/
+Author: 		Marty Helmick
+Author URI: 	http://martyhelmick.com/
+Description: 	A clean and minimal child theme for the <a href="http://wordpress.org/themes/stargazer">Stargazer</a> parent theme.
+Version: 		1.0
+License: 		GNU General Public License v2 or later
+License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 	Material Gaze
 Tags:
+Template:		stargazer
 */
 
 /*------------------------------------*\
@@ -83,11 +84,6 @@ h1.loop-title {
 	border: none;
 	color: #fff;
 	background: none;}
-
-.widget {
-	padding: 0; }
-.widget > * {
-	padding: 0 1.5rem; }
 
 .entry, .entry:last-of-type {
 	padding-top: 1.5rem; }
@@ -178,14 +174,37 @@ li.ping:before, .comment-content:before {
 		margin-top: -5px;
 		margin-right: -6px;
 		border-radius: 50%;
+		background-color: #00bcd4;
 		box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
 	#menu-primary .search-form .search-toggle::before {
 		color: #fff; }
 	#menu-primary .search-form .search-toggle:hover, #menu-primary .search-form .search-toggle:active, #menu-primary .search-form .search-toggle:focus {
 		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23); } }
 
+#menu-primary .menu-toggle button {
+	color: #455a64;
+	box-shadow: none; }
+
 #menu-primary {
 	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
+
+#menu-primary li a {
+	border-color: transparent; 
+	color: rgba(255, 255, 255, 0.75);
+	background: #f5f5f5;}
+
+#menu-secondary li a, #menu-secondary .menu-toggle button {
+	border-color: transparent; 
+	color: rgba(255, 255, 255, 0.75);
+	background: #2962ff;}
+
+ul#menu-secondary-items {
+	border-radius: 2px; 
+	background-color: #2962ff;}
+@media only screen and (min-width: 800px) {
+	ul#menu-secondary-items {
+		padding-right: 24px; 
+		box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);} }
 
 #menu-primary, #menu-primary .search-form > div, #footer, .audio-shortcode-wrap, .media-shortcode-extend .media-info, .media-info-toggle, .entry-content .media-info-toggle, .media-info-toggle:hover, .media-info-toggle:focus, .wp-audio-shortcode.mejs-container, .mejs-controls, .mejs-volume-button .mejs-volume-slider, .mejs-overlay-play .mejs-overlay-button::after, .mejs-time-rail .mejs-time-float, .wp-playlist-dark {
 	background: #f5f5f5; }
@@ -195,8 +214,9 @@ li.ping:before, .comment-content:before {
 #menu-primary li a:hover, #menu-primary li a:focus, #menu-primary li a:active, #menu-secondary li li a:hover, #menu-secondary li li a:focus, #menu-secondary li li a:active, #menu-primary .menu-toggle button:hover:hover, #menu-primary .menu-toggle button:hover:focus, #menu-primary .menu-toggle button:hover:active, #menu-primary .menu-toggle button:focus:hover, #menu-primary .menu-toggle button:focus:focus, #menu-primary .menu-toggle button:focus:active {
 	color: #455a64; }
 
-.ltr #menu-primary ul ul, .ltr #menu-secondary ul ul, .ltr #menu-primary li:hover > ul, .ltr #menu-primary li:focus > ul, .ltr #menu-primary li.focus > ul, .ltr #menu-secondary li:hover > ul, .ltr #menu-secondary li:focus > ul, .ltr #menu-secondary li.focus > ul {
-	box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22); }
+@media only screen and (min-width: 800px) {
+	.ltr #menu-primary ul ul, .ltr #menu-secondary ul ul, .ltr #menu-primary li:hover > ul, .ltr #menu-primary li:focus > ul, .ltr #menu-primary li.focus > ul, .ltr #menu-secondary li:hover > ul, .ltr #menu-secondary li:focus > ul, .ltr #menu-secondary li.focus > ul {
+		box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22); } }
 
 .menu li > ul::before {
 	content: none; }
@@ -339,6 +359,14 @@ blockquote {
 /*------------------------------------*\
     ##Stargazer
 \*------------------------------------*/
+.widget {
+	padding: 0; }
+.widget > * {
+	padding: 0 1.5rem 1.5rem; }
+
+.widget ul {
+	margin-bottom: 0; }
+
 .widget-title {
 	padding: 0; }
 
