@@ -84,7 +84,8 @@ label:focus, label.focus {
     #LAYOUTS
 \*------------------------------------*/
 #container > .wrap {
-	background: none; }
+	position: relative; 
+	background: none;}
 
 .custom-background #container > .wrap {
 	margin-top: 0; }
@@ -256,10 +257,29 @@ li.ping:before, .comment-content:before {
 	top: 47px; }
 
 .header-image {
-	margin-bottom: 1.5rem; }
+	position: absolute;
+	top: 0; 
+	margin-bottom: 1.5rem;}
 
 .home .header-image {
 	margin-bottom: 0; }
+
+#header {
+	position: relative;
+	z-index: 1; }
+
+#main {
+	position: relative; }
+
+#menu-secondary {
+	position: relative;
+	z-index: 2; }
+
+#menu-secondary li a {
+	color: #fff; 
+	font-size: 0.875rem;
+	font-weight: 400;
+	letter-spacing: 0.04em;}
 
 /*------------------------------------*\
     #FOOTER

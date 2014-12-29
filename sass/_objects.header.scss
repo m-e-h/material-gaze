@@ -68,8 +68,31 @@ top: 47px;
 
 .header-image {
 margin-bottom: 1.5rem;
+position: absolute;
+top: 0;
 }
 
 .home .header-image {
 margin-bottom: 0;
+}
+
+#header{
+position: relative;
+z-index: 1;
+}
+
+#main {
+position: relative;
+}
+
+#menu-secondary {
+position: relative;
+z-index: 2;
+}
+
+#menu-secondary li a {
+font-size: .875rem;
+font-weight: 400;
+letter-spacing: .04em;
+color: #fff;
 }
