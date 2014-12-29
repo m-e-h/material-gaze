@@ -10,7 +10,6 @@ margin-right: -6px;
 width: 45px;
 height: 45px;
 border-radius: 50%;
-background-color: #70ab88 !important;
 @include shadow-z1();
     &::before {
         color: #fff;
@@ -65,4 +64,12 @@ background: $grey-200;
 
 #menu-primary ul ul {
 top: 47px;
+}
+
+.header-image {
+margin-bottom: 1.5rem;
+}
+
+.home .header-image {
+margin-bottom: 0;
 }

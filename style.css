@@ -221,7 +221,6 @@ li.ping:before, .comment-content:before {
 		margin-top: -5px;
 		margin-right: -6px;
 		border-radius: 50%;
-		background-color: #70ab88 !important;
 		box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
 	#menu-primary .search-form .search-toggle::before {
 		color: #fff; }
@@ -255,6 +254,12 @@ li.ping:before, .comment-content:before {
 
 #menu-primary ul ul {
 	top: 47px; }
+
+.header-image {
+	margin-bottom: 1.5rem; }
+
+.home .header-image {
+	margin-bottom: 0; }
 
 /*------------------------------------*\
     #FOOTER
@@ -334,6 +339,12 @@ button:focus, button:active, input[type="button"]:focus, input[type="button"]:ac
 /*------------------------------------*\
     #BLOCKQUOTES
 \*------------------------------------*/
+blockquote {
+	padding-bottom: 1px; 
+	border: 0;
+	border-radius: 2px;
+	outline: 0;}
+
 /*------------------------------------*\
     #BREADCRUMBS
 \*------------------------------------*/

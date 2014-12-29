@@ -3,9 +3,10 @@
 \*------------------------------------*/
 
 blockquote {
-// border-left: 4px solid $color-grey-ui;
-// padding-left: $base-spacing-unit;
-// margin: $base-spacing-unit 0;
+outline: 0;
+border: 0;
+border-radius: 2px;
+padding-bottom: 1px;
 }
 
 blockquote:before,
