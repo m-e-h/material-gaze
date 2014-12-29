@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    #SHARED
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    ##Stargazer
+\*------------------------------------*/
+
+
+
+
+
+.widget-title {
+	padding: 0;
+}
+
+.widget-title>.wrap, #comments-number>.wrap, #reply-title>.wrap, .attachment-meta-title>.wrap {
+@include font-size (24px);
+font-weight: 300;
+width: 100%;
+box-sizing: border-box;
+border-radius: 2px 2px 0 0;
+}
+
+.widget-title>.wrap::before {
+font-size: 24px;
+}
+
+.widget_search>.search-form {
+margin: 0;
+border-radius: 2px;
+}
+
+#menu-primary .search-form .search-toggle::before {
+font-size: 22px;
+}
+
+.menu input[type=search] {
+	background: none;
+	border: 0;
+	border-bottom: 1px solid;
+
+&:focus {
+		background: none;
+	border: 0;
+	border-bottom: 2px solid $color-primary;
+}
+}
+
+
+.breadcrumbs {
+padding: 8px 15px;
+background-color: #f5f5f5;
+border-radius: 2px;
+}

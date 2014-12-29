@@ -1,0 +1,42 @@
+// /*------------------------------------*\
+//     #MEDIA-QUERIES
+// \*------------------------------------*/
+
+$small: 700px !default;
+$medium: 800px !default;
+$wide: 950px !default;
+$huge: 80em !default;
+
+	@mixin media-query($media-query) {
+		@if $media-query == small {
+			@media only screen and (min-width: $small) { @content; }
+		}
+
+		@if $media-query == small-only {
+			@media only screen and (max-width: $medium - 1) { @content; }
+		}
+
+		@if $media-query == medium {
+			@media only screen and (min-width: $medium) { @content; }
+		}
+
+		@if $media-query == medium-only {
+			@media only screen and (min-width: $medium) and (max-width: $wide - 1) { @content; }
+		}
+
+		@if $media-query == wide {
+			@media only screen and (min-width: $wide) { @content; }
+		}
+
+		@if $media-query == huge {
+			@media only screen and (min-width: $huge) { @content; }
+		}
+	}
+
+	// Just some helpers...
+	@mixin sm { @include media-query(small) { @content }; }
+	@mixin sm-only { @include media-query(small-only) { @content }; }
+	@mixin md { @include media-query(medium) { @content }; }
+	@mixin md-only { @include media-query(medium-only) { @content }; }
+	@mixin lg { @include media-query(wide) { @content }; }
+	@mixin xl { @include media-query(huge) { @content }; }

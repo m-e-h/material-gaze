@@ -1,0 +1,391 @@
+/*
+Theme Name: Material Gaze
+Theme URI: http://martyhelmick.com/
+Author: Marty Helmick
+Author URI: http://martyhelmick.com/
+Description: A clean and minimal child theme for the <a href="http://wordpress.org/themes/stargazer">Stargazer</a> parent theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Material Gaze
+Tags:
+*/
+/**
+ * SETTINGS             GLOBAL CONFIG AND SETTINGS
+ * ========             ==========================
+ * Global...............Site-wide settings and config.
+ * Colors...............Color schemes and settings.
+ *
+ *
+ * TOOLS                GLOBAL PREPROCESSOR TOOLING
+ * =====                ===========================
+ * Functions............Globally-available helper functions.
+ * Mixins...............Globally-available mixins.
+ *
+ *
+ * GENERIC              SITE-WIDE STARTING-POINT STYLES
+ * =======              ===============================
+ * Box-sizing...........Apply global `border-box`.
+ * Normalize.css........Use @necolas’ Normalize.css for consistency.
+ * Reset................Remove default margins.
+ * Shared...............High-level shared traits (mainly for vertical rhythm).
+ *
+ *
+ * BASE                 TYPE (I.E. BARE ELEMENT) SELECTORS
+ * ====                 ==================================
+ * Page.................Page-level (e.g. `html`, `body`) styles.
+ * Headings.............Headings 1–6.
+ * Links................Default hyperlink styles.
+ *
+ *
+ * OBJECTS              DESIGN-FREE DESIGN PATTERNS
+ * =======              ===========================
+ * Buttons..............Unstyled button objects.
+ *
+ *
+ * COMPONENTS           DESIGNED, COMPLETE COMPONENTS
+ * ==========           =============================
+ * Buttons..............Fully styled buttons and their variants.
+ *
+ *
+ * TRUMPS               HELPERS AND OVERRIDES
+ * ======               =====================
+ * Widths...............Width helper classes.
+ */
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+button a, .menu-items a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	text-decoration: none; }
+button a:hover, button a:focus, button a:active, .menu-items a:hover, .menu-items a:focus, .menu-items a:active, h1 a:hover, h1 a:focus, h1 a:active, h2 a:hover, h2 a:focus, h2 a:active, h3 a:hover, h3 a:focus, h3 a:active, h4 a:hover, h4 a:focus, h4 a:active, h5 a:hover, h5 a:focus, h5 a:active, h6 a:hover, h6 a:focus, h6 a:active {
+	text-decoration: none; }
+
+label:focus, label.focus {
+	text-decoration: none; }
+
+.comment-reply-link, .comment-reply-login, input[type="button"], input[type="reset"], input[type="submit"] {
+	text-decoration: none; }
+.comment-reply-link:hover, .comment-reply-link:focus, .comment-reply-link:active, .comment-reply-login:hover, .comment-reply-login:focus, .comment-reply-login:active, input[type="button"]:hover, input[type="button"]:focus, input[type="button"]:active, input[type="reset"]:hover, input[type="reset"]:focus, input[type="reset"]:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
+	text-decoration: none; }
+
+#site-title a:hover, #site-title a:focus {
+	border-bottom: none; }
+
+#menu-primary-items > li > a {
+	border-bottom: 2px solid transparent; }
+#menu-primary-items > li > a:hover, #menu-primary-items > li > a:focus, #menu-primary-items > li > a:active {
+	border-bottom: 2px solid #2962ff; }
+
+.sub-menu:hover ~ #menu-primary-items > li > a, #menu-primary li.current-menu-item > a {
+	border-bottom: 2px solid #2962ff;
+	color: #455a64; }
+
+/*------------------------------------*\
+    #LAYOUTS
+\*------------------------------------*/
+#container > .wrap {
+	background: none; }
+
+.custom-background #container > .wrap {
+	margin-top: 0; }
+
+.custom-background #header, .custom-background #main, .custom-background #sidebar-subsidiary {
+	padding-right: 12.5px; 
+	padding-left: 12.5px;}
+
+.main {
+	padding-top: 1.5rem; }
+
+.display-header-text #header {
+	border-bottom: 0; }
+
+.loop-meta, .widget, .entry, .entry:last-of-type {
+	box-sizing: border-box;
+	margin: 0 0 0.75rem;
+	padding: 0 1.5rem;
+	border: 0; 
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);}
+@media only screen and (min-width: 950px) {
+	.loop-meta, .widget, .entry, .entry:last-of-type {
+		margin-bottom: 1.5rem; } }
+
+.loop-meta {
+	background-color: #2759e5; }
+
+h1.loop-title {
+	border-color: rgba(255, 255, 255, 0.3); 
+	color: #fff;}
+
+.loop-description {
+	padding-top: 0; 
+	border: none;
+	color: #fff;
+	background: none;}
+
+.widget {
+	padding: 0; }
+.widget > * {
+	padding: 0 1.5rem; }
+
+.entry, .entry:last-of-type {
+	padding-top: 1.5rem; }
+
+.plural .content .entry-title, .entry-title {
+	margin-top: -1.5rem; }
+
+@media only screen and (min-width: 950px) {
+	.custom-background #header, .custom-background #main, .custom-background #sidebar-subsidiary {
+		padding-right: 25px; 
+		padding-left: 25px;}
+
+	#sidebar-primary {
+		width: 32.5%;
+		max-width: 100%; }
+
+	.layout-2c-l #content, .layout-2c-r #content {
+		width: 65.5%; }
+	}
+
+.comment-respond {
+	box-sizing: border-box;
+	background-color: #fff; 
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);}
+
+.comment-form {
+	padding: 0 1.5rem 1.5rem; }
+
+#comments {
+	box-sizing: border-box;
+	padding-bottom: 0; 
+	background-color: #fff;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);}
+#comments .depth-1 > article > .comment-meta {
+	text-align: left; }
+#comments .depth-1 > article > .comment-meta > .avatar {
+	float: left;
+	margin-right: 1.5rem;
+	margin-left: 0; }
+
+.comment-list {
+	padding-right: 1.5rem;
+	padding-left: 1.5rem; }
+
+li.comment, li.ping {
+	clear: both; }
+
+li.ping, .comment-content {
+	position: relative;
+	padding-bottom: 1px; 
+	border: 0;
+	border-radius: 2px;
+	background: #f5f5f5;}
+
+li.ping:before, .comment-content:before {
+	position: absolute;
+	top: -20px;
+	width: 0;
+	height: 0;
+	border-right: 13px solid transparent;
+	border-bottom: 26px solid #f5f5f5;
+	border-left: 13px solid transparent;
+	content: ""; }
+
+.comment.odd > article > .comment-content:before {
+	right: 15px; }
+
+.comment.odd > article > .comment-meta {
+	text-align: right; }
+
+.comment.odd > article > .comment-meta > .avatar {
+	float: right;
+	margin-right: 0; 
+	margin-left: 1.5rem;}
+
+.comment-reply-link, .comment-reply-login {
+	margin-bottom: 1.5rem;
+	border-radius: 0 0 2px 2px; }
+
+/*------------------------------------*\
+    #CODE
+\*------------------------------------*/
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+@media only screen and (min-width: 800px) {
+	#menu-primary .search-form .search-toggle {
+		position: relative;
+		width: 45px;
+		height: 45px;
+		margin-top: -5px;
+		margin-right: -6px;
+		border-radius: 50%;
+		background-color: #70ab88 !important;
+		box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
+	#menu-primary .search-form .search-toggle::before {
+		color: #fff; }
+	#menu-primary .search-form .search-toggle:hover, #menu-primary .search-form .search-toggle:active, #menu-primary .search-form .search-toggle:focus {
+		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23); } }
+
+#menu-primary {
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
+
+#menu-primary, #menu-primary .search-form > div, #footer, .audio-shortcode-wrap, .media-shortcode-extend .media-info, .media-info-toggle, .entry-content .media-info-toggle, .media-info-toggle:hover, .media-info-toggle:focus, .wp-audio-shortcode.mejs-container, .mejs-controls, .mejs-volume-button .mejs-volume-slider, .mejs-overlay-play .mejs-overlay-button::after, .mejs-time-rail .mejs-time-float, .wp-playlist-dark {
+	background: #f5f5f5; }
+
+#menu-primary li a, #menu-secondary li li a, #menu-primary .menu-toggle button:hover, #menu-primary .menu-toggle button:focus {
+	color: #78909c; }
+#menu-primary li a:hover, #menu-primary li a:focus, #menu-primary li a:active, #menu-secondary li li a:hover, #menu-secondary li li a:focus, #menu-secondary li li a:active, #menu-primary .menu-toggle button:hover:hover, #menu-primary .menu-toggle button:hover:focus, #menu-primary .menu-toggle button:hover:active, #menu-primary .menu-toggle button:focus:hover, #menu-primary .menu-toggle button:focus:focus, #menu-primary .menu-toggle button:focus:active {
+	color: #455a64; }
+
+.ltr #menu-primary ul ul, .ltr #menu-secondary ul ul, .ltr #menu-primary li:hover > ul, .ltr #menu-primary li:focus > ul, .ltr #menu-primary li.focus > ul, .ltr #menu-secondary li:hover > ul, .ltr #menu-secondary li:focus > ul, .ltr #menu-secondary li.focus > ul {
+	box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22); }
+
+.menu li > ul::before {
+	content: none; }
+
+@media only screen and (min-width: 800px) {
+	#menu-primary li li a, #menu-secondary li li a {
+		border: 0; 
+		background: #fff;} }
+
+#menu-primary ul ul li a:hover, #menu-secondary ul ul li a:hover, #menu-primary ul ul li a:focus, #menu-secondary ul ul li a:focus {
+	background: #eee; }
+
+#menu-primary ul ul {
+	top: 47px; }
+
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+#footer a {
+	color: #78909c;
+	font-weight: 500; }
+
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+/* ====== Primary Font ====== */
+.font-primary, #footer, body, input, textarea, .label-checkbox, .label-radio, .required, #site-description, #reply-title small {
+	font-family: "RobotoDraft", "Helvetica", "Arial", sans-serif;
+	font-weight: 300; }
+
+/* ====== Secondary Font ====== */
+.font-secondary, dt, th, legend, label, input[type="submit"], input[type="reset"], input[type="button"], button, select, option, .wp-caption-text, .gallery-caption, .mejs-controls, .wp-playlist-item-meta, .entry-byline, .entry-footer, .chat-author cite, .chat-author, .comment-meta, .menu, .breadcrumb-trail, .media-info .prep, .comment-reply-link, .comment-reply-login, .clean-my-archives .day, .whistle-title {
+	font-family: "RobotoDraft", "Helvetica", "Arial", sans-serif;
+	font-weight: 300; }
+
+/* ====== Headlines Font ====== */
+.font-headlines, h1, h2, h3, h4, h5, h6 {
+	font-family: "RobotoDraft", "Helvetica", "Arial", sans-serif;
+	font-weight: 300; }
+
+/* Thin font weights. */
+#site-description, .main {
+	font-weight: 300; }
+
+#menu-primary li a, #menu-secondary li a {
+	font-size: 14px;
+	font-size: 0.875rem; 
+	font-weight: 400;
+	letter-spacing: 0.04em;}
+
+#menu-primary li li a, #menu-secondary li li a {
+	padding-top: 12px;
+	padding-bottom: 12px; 
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: 400;
+	letter-spacing: 0.04em;}
+
+.menu li > a::after {
+	vertical-align: middle; }
+
+/* Normal font weights. */
+.widget-title > .wrap, #comments-number > .wrap, #reply-title > .wrap, .attachment-meta-title > .wrap, dt, dt.font-secondary {
+	font-weight: 400; }
+
+/* Bold font weights. */
+b, strong, .comment-author {
+	font-weight: 700; }
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	border-radius: 2px;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); 
+	font-weight: 400;
+	text-decoration: none;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	-webkit-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);}
+button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner {
+	border: 0; }
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+	background-color: #dee4e7;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23); }
+button:focus, button:active, input[type="button"]:focus, input[type="button"]:active, input[type="reset"]:focus, input[type="reset"]:active, input[type="submit"]:focus, input[type="submit"]:active {
+	background-color: #b2c0c6;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23); }
+
+/*------------------------------------*\
+    #BLOCKQUOTES
+\*------------------------------------*/
+/*------------------------------------*\
+    #BREADCRUMBS
+\*------------------------------------*/
+.breadcrumbs {
+	cursor: default; }
+.breadcrumbs a {
+	color: #757575; 
+	text-decoration: none;}
+.breadcrumbs .sep {
+	color: #9e9e9e; }
+.breadcrumbs .trail-end {
+	color: #616161; 
+	font-weight: bold;}
+
+/*------------------------------------*\
+    #SHARED
+\*------------------------------------*/
+/*------------------------------------*\
+    ##Stargazer
+\*------------------------------------*/
+.widget-title {
+	padding: 0; }
+
+.widget-title > .wrap, #comments-number > .wrap, #reply-title > .wrap, .attachment-meta-title > .wrap {
+	box-sizing: border-box;
+	width: 100%;
+	border-radius: 2px 2px 0 0; 
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: 300;
+	line-height: 1;}
+
+.widget-title > .wrap::before {
+	font-size: 24px; }
+
+.widget_search > .search-form {
+	margin: 0;
+	border-radius: 2px; }
+
+#menu-primary .search-form .search-toggle::before {
+	font-size: 22px; }
+
+.menu input[type=search] {
+	border: 0;
+	border-bottom: 1px solid; 
+	background: none;}
+.menu input[type=search]:focus {
+	border: 0;
+	border-bottom: 2px solid #2962ff; 
+	background: none;}
+
+.breadcrumbs {
+	padding: 8px 15px;
+	border-radius: 2px; 
+	background-color: #f5f5f5;}
