@@ -10,48 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: Material Gaze
 Tags:
 */
-/**
- * SETTINGS             GLOBAL CONFIG AND SETTINGS
- * ========             ==========================
- * Global...............Site-wide settings and config.
- * Colors...............Color schemes and settings.
- *
- *
- * TOOLS                GLOBAL PREPROCESSOR TOOLING
- * =====                ===========================
- * Functions............Globally-available helper functions.
- * Mixins...............Globally-available mixins.
- *
- *
- * GENERIC              SITE-WIDE STARTING-POINT STYLES
- * =======              ===============================
- * Box-sizing...........Apply global `border-box`.
- * Normalize.css........Use @necolas’ Normalize.css for consistency.
- * Reset................Remove default margins.
- * Shared...............High-level shared traits (mainly for vertical rhythm).
- *
- *
- * BASE                 TYPE (I.E. BARE ELEMENT) SELECTORS
- * ====                 ==================================
- * Page.................Page-level (e.g. `html`, `body`) styles.
- * Headings.............Headings 1–6.
- * Links................Default hyperlink styles.
- *
- *
- * OBJECTS              DESIGN-FREE DESIGN PATTERNS
- * =======              ===========================
- * Buttons..............Unstyled button objects.
- *
- *
- * COMPONENTS           DESIGNED, COMPLETE COMPONENTS
- * ==========           =============================
- * Buttons..............Fully styled buttons and their variants.
- *
- *
- * TRUMPS               HELPERS AND OVERRIDES
- * ======               =====================
- * Widths...............Width helper classes.
- */
+
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
@@ -207,10 +166,7 @@ li.ping:before, .comment-content:before {
 .comment-reply-link, .comment-reply-login {
 	margin-bottom: 1.5rem;
 	border-radius: 0 0 2px 2px; }
-
-/*------------------------------------*\
-    #CODE
-\*------------------------------------*/
+	
 /*------------------------------------*\
     #HEADER
 \*------------------------------------*/
@@ -330,11 +286,9 @@ li.ping:before, .comment-content:before {
 .menu li > a::after {
 	vertical-align: middle; }
 
-/* Normal font weights. */
 .widget-title > .wrap, #comments-number > .wrap, #reply-title > .wrap, .attachment-meta-title > .wrap, dt, dt.font-secondary {
 	font-weight: 400; }
 
-/* Bold font weights. */
 b, strong, .comment-author {
 	font-weight: 700; }
 
@@ -382,9 +336,6 @@ blockquote {
 	color: #616161; 
 	font-weight: bold;}
 
-/*------------------------------------*\
-    #SHARED
-\*------------------------------------*/
 /*------------------------------------*\
     ##Stargazer
 \*------------------------------------*/
