@@ -28,7 +28,7 @@ function material_gaze_theme_setup() {
 	add_theme_support(
 		'custom-background',
 		array(
-			'default-color' => 'E5E5E5',
+			'default-color' => 'e5e5e5',
 			'default-image' => '',
 		)
 	);
@@ -38,10 +38,35 @@ function material_gaze_theme_setup() {
 		'custom-header', 
 		array(
 			'default-text-color' => '252525',
-			'default-image'      => '',
+			'default-image'      => '%2$s/images/headers/blue.jpg',
 			'random-default'     => false,
 		)
 	);
+
+
+	/* Register default headers. */
+	register_default_headers(
+		array(
+			'blue' => array(
+				'url'           => '%2$s/images/headers/blue.jpg',
+				'thumbnail_url' => '%2$s/images/headers/blue-thumb.jpg',
+				'description'   => __( 'default', 'material-gaze' )
+			),
+			'red' => array(
+				'url'           => '%2$s/images/headers/red.jpg',
+				'thumbnail_url' => '%2$s/images/headers/red-thumb.jpg',
+				'description'   => __( 'red', 'material-gaze' )
+			),
+			'pyramid' => array(
+				'url'           => '%2$s/images/headers/pyramid.jpg',
+				'thumbnail_url' => '%2$s/images/headers/pyramid-thumb.jpg',
+				'description'   => __( 'pyramid', 'material-gaze' )
+			),
+		)
+	);
+	/* Custom editor stylesheet. */
+	add_editor_style( '//fonts.googleapis.com/css?family=RobotoDraft' );
+
 
 	/* Filter to add custom default backgrounds (supported by the framework). */
 	add_filter( 'hybrid_default_backgrounds', 'material_gaze_default_backgrounds' );
@@ -77,6 +102,8 @@ function material_gaze_default_backgrounds( $backgrounds ) {
 	return array_merge( $new_backgrounds, $backgrounds );
 }
 
+
+
 /**
  * Add a default custom color for the theme's "primary" color option.
  *
@@ -86,7 +113,7 @@ function material_gaze_default_backgrounds( $backgrounds ) {
  * @return string
  */
 function material_gaze_color_primary( $hex ) {
-	return $hex ? $hex : '2759e5';
+	return $hex ? $hex : '00bcd4';
 }
 
 
@@ -94,32 +121,3 @@ function material_gaze_enqueue_styles() {
 	wp_enqueue_style( 'material-gaze-fonts', '//fonts.googleapis.com/css?family=RobotoDraft:regular,bold,italic,thin,light,bolditalic,black,medium' );
 }
 
-add_action( 'customize_register', 'mg_customize_register' );
-
-	function mg_customize_register( $wp_customize ) {
-		/* Add a new setting for this color. */
-		$wp_customize->add_setting(
-			'color_secondary',
-			array(
-				'default'              => apply_filters( 'theme_mod_color_secondary', '' ),
-				'type'                 => 'theme_mod',
-				'capability'           => 'edit_theme_options',
-				'sanitize_callback'    => 'sanitize_hex_color_no_hash',
-				'sanitize_js_callback' => 'maybe_hash_hex_color',
-				'transport'            => 'postMessage',
-			)
-		);
-		/* Add a control for this color. */
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'custom-colors-secondary',
-				array(
-					'label'    => esc_html__( 'secondary Color', 'stargazer' ),
-					'section'  => 'colors',
-					'settings' => 'color_secondary',
-					'priority' => 10,
-				)
-			)
-		);
-	}
