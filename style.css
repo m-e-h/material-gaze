@@ -272,8 +272,7 @@ li.ping:before, .comment-content:before {
 	position: relative; }
 
 #menu-secondary {
-	position: relative;
-	z-index: 2; }
+	position: relative; }
 
 #menu-secondary li a {
 	color: #fff; 
