@@ -74,6 +74,9 @@ function material_gaze_theme_setup() {
 	/* Add a custom default color for the "primary" color option. */
 	add_filter( 'theme_mod_color_primary', 'material_gaze_color_primary' );
 
+		/* Add a custom default color for the "primary" color option. */
+	add_filter( 'wp_head_callback', 'material_gaze_get_primary_styles' );
+
 	/* Load stylesheets. */
 	add_action( 'wp_enqueue_scripts', 'material_gaze_enqueue_styles', 0 );
 }
@@ -114,6 +117,19 @@ function material_gaze_default_backgrounds( $backgrounds ) {
  */
 function material_gaze_color_primary( $hex ) {
 	return $hex ? $hex : '00bcd4';
+}
+
+
+function material_gaze_get_primary_styles() {
+	$style = '';
+		$hex = get_theme_mod( 'color_primary', '' );
+		$rgb = join( ', ', hybrid_hex_to_rgb( $hex ) );
+		/* Color. */
+		// $style .= "a, .wp-playlist-light .wp-playlist-playing { color: rgba( {$rgb}, 0.75 ); } ";
+		
+		$style .= "#menu-primary .search-form .search-toggle { background: #{$hex}; } ";
+		
+		return str_replace( array( "\r", "\n", "\t" ), '', $style );
 }
 
 
