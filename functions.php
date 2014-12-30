@@ -28,7 +28,7 @@ function material_gaze_theme_setup() {
 	add_theme_support(
 		'custom-background',
 		array(
-			'default-color' => 'e5e5e5',
+			'default-color' => 'fafafa',
 			'default-image' => '',
 		)
 	);
@@ -37,7 +37,7 @@ function material_gaze_theme_setup() {
 	add_theme_support( 
 		'custom-header', 
 		array(
-			'default-text-color' => 'ffffff',
+			'default-text-color' => '424242',
 			'default-image'      => '%2$s/images/headers/blue.jpg',
 			'random-default'     => false,
 		)
