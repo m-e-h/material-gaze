@@ -1,9 +1,9 @@
-# Copyright (C) 2014 Justin Tadlock
+# Copyright (C) 2014 Marty Helmick
 # This file is distributed under the GNU General Public License v2.0 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Twiggy 1.0.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/twiggy\n"
+"Project-Id-Version: Material Gaze 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/material-gaze\n"
 "POT-Creation-Date: 2014-05-18 19:24:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,19 +14,19 @@ msgstr ""
 
 
 #. Theme Name of the plugin/theme
-msgid "Twiggy"
+msgid "Material Gaze"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://themehybrid.com/themes/twiggy"
+msgid "http://themehybrid.com/themes/material-gaze"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "A clean and minimal child theme for the <a href=\"http://wordpress.org/themes/stargazer\">Stargazer</a> parent theme. This child theme uses a thinner font to completely transform how its parent theme looks.  It offers an alternative color scheme and comes packaged with additional backgrounds to use with the WordPress custom background feature."
+msgid "A clean and minimal child theme for the <a href=\"http://wordpress.org/themes/stargazer\">Stargazer</a> parent theme. This child theme takes inspiration from Google's Material Design to transform how its parent theme looks.  It offers an alternative color scheme and comes packaged with additional backgrounds to use with the WordPress custom background feature."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Justin Tadlock"
+msgid "Marty Helmick"
 msgstr ""
 
 #. Author URI of the plugin/theme

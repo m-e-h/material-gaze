@@ -11,6 +11,7 @@ Text Domain: 	Material Gaze
 Tags:
 Template:		stargazer
 */
+<<<<<<< HEAD
 
 /*------------------------------------*\
     #LINKS
@@ -22,6 +23,34 @@ button a:hover, button a:focus, button a:active, .menu-items a:hover, .menu-item
 
 label:focus, label.focus {
 	text-decoration: none; }
+=======
+/* ====== Primary Font ====== */
+.font-primary, p, li, body, input, textarea, .label-checkbox, .label-radio, .required, #site-description, #reply-title small {
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	font-weight: 300; }
+
+/* ====== Secondary Font ====== */
+.font-secondary, dt, th, legend, label, input[type="submit"], input[type="reset"], input[type="button"], button, select, option, .wp-caption-text, .gallery-caption, .mejs-controls, .wp-playlist-item-meta, .entry-byline, .entry-footer, .chat-author cite, .chat-author, .comment-meta, .menu, .breadcrumb-trail, .media-info .prep, .comment-reply-link, .comment-reply-login, .clean-my-archives .day, .whistle-title {
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif; }
+
+a {
+	font-weight: 400; }
+
+/* ====== Headlines Font ====== */
+.menu, .font-headlines, h1, h2, h3, h4, h5, h6 {
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	font-weight: 300; }
+.menu a:hover, .menu a:focus, .menu a:active, .font-headlines a:hover, .font-headlines a:focus, .font-headlines a:active, h1 a:hover, h1 a:focus, h1 a:active, h2 a:hover, h2 a:focus, h2 a:active, h3 a:hover, h3 a:focus, h3 a:active, h4 a:hover, h4 a:focus, h4 a:active, h5 a:hover, h5 a:focus, h5 a:active, h6 a:hover, h6 a:focus, h6 a:active {
+	text-decoration: none; }
+
+/* ====== color: #212121 ====== */
+body, .media-shortcode-extend .media-info, .wp-playlist-dark .wp-playlist-item {
+	color: #212121; }
+
+/* ====== border-color: #E0E0E0 ====== */
+h1, h2, hr, code, pre, .form-allowed-tags code, fieldset, legend, input, select, textarea, .gallery .gallery-icon a img, .avatar, .display-header-text #header, .entry, .format-chat .chat-author, .media-info li, .wp-playlist-tracks, .wp-playlist-item, .loop-description, .loop-pagination, .loop-nav, #sidebar-subsidiary, li.ping, .comment-content, .clean-my-archives .day-duplicate .day, .whistles-tabs-nav li a, .whistles-tabs .whistles-tabs-nav li a:hover, .whistles-tabs .whistles-tabs-nav li a:focus, .whistles-tabs .whistles-tabs-wrap, .whistles-toggle .whistle-title, .whistles-accordion .whistle-title, .whistles-toggle .whistle-content, .whistles-accordion .whistle-content {
+	border-color: #e0e0e0; }
+>>>>>>> 2573f9d... finishing the design
 
 .comment-reply-link, .comment-reply-login, input[type="button"], input[type="reset"], input[type="submit"] {
 	text-decoration: none; }
@@ -55,6 +84,7 @@ label:focus, label.focus {
 .display-header-text #header {
 	border-bottom: 0; }
 
+<<<<<<< HEAD
 .loop-meta, .widget, .entry, .entry:last-of-type {
 	box-sizing: border-box;
 	border: 0; 
@@ -95,6 +125,19 @@ h1.loop-title {
 .loop-meta, .entry, .entry:last-of-type {
 	margin-bottom: 16px; 
 	padding: 30px 40px 15px;}
+=======
+/* ====== background: #455A64 ====== */
+#menu-primary, #menu-primary .search-form > div, #footer, .audio-shortcode-wrap, .media-shortcode-extend .media-info, .media-info-toggle, .entry-content .media-info-toggle, .media-info-toggle:hover, .media-info-toggle:focus, .wp-audio-shortcode.mejs-container, .mejs-controls, .mejs-volume-button .mejs-volume-slider, .mejs-overlay-play .mejs-overlay-button::after, .mejs-time-rail .mejs-time-float, .wp-playlist-dark {
+	background: #455a64; }
+
+body.custom-colors {
+	border-top-color: #455a64;
+	border-bottom-color: #455a64; }
+
+/* ====== Other colors ====== */
+tr, thead, tfoot, td {
+	border-color: #f5f5f5; }
+>>>>>>> 2573f9d... finishing the design
 
 .breadcrumbs {
 	display: -webkit-box;
@@ -112,6 +155,7 @@ h1.loop-title {
 .breadcrumbs, .widget {
 	margin-bottom: 16px; }
 
+<<<<<<< HEAD
 .widget > * {
 	padding: 30px 40px 15px; }
 
@@ -119,6 +163,10 @@ h1.loop-title {
 	margin: 0 0 16px;
 	padding: 0;
 	border: 0; }
+=======
+.gallery .gallery-icon a img {
+	background: none; }
+>>>>>>> 2573f9d... finishing the design
 
 .comment-form {
 	padding: 30px 40px 15px; }
@@ -130,12 +178,18 @@ h1.loop-title {
 	.custom-background #container > .wrap {
 		margin-top: 24px; }
 
+<<<<<<< HEAD
 	.main {
 		padding-top: 24px; }
 
 	.custom-background #header, .custom-background #main, .custom-background #sidebar-subsidiary {
 		padding-right: 24px; 
 		padding-left: 24px;}
+=======
+@media only screen and (max-width: 799px) {
+	#menu-secondary .wrap, #menu-primary .search-form > div {
+		background: #fff; }
+>>>>>>> 2573f9d... finishing the design
 
 	.loop-meta, .entry, .entry:last-of-type {
 		margin-bottom: 24px; 
@@ -145,6 +199,7 @@ h1.loop-title {
 		margin-bottom: 24px; }
 	}
 
+<<<<<<< HEAD
 @media only screen and (min-width: 950px) {
 	.custom-background #container > .wrap {
 		margin-top: 40px; }
@@ -300,6 +355,19 @@ ul#menu-secondary-items {
 .menu li > ul::before {
 	content: none; }
 
+=======
+.entry-title, .entry-title a {
+	color: #212121; }
+
+.image-sizes .sep {
+	color: #e0e0e0; }
+
+.loop-description {
+	color: #757575;
+	background: #f9f9f9; }
+
+/* Menu colors */
+>>>>>>> 2573f9d... finishing the design
 @media only screen and (min-width: 800px) {
 	#menu-primary li li a, #menu-secondary li li a {
 		border: 0; 
@@ -322,8 +390,22 @@ ul#menu-secondary-items {
 #main {
 	position: relative; }
 
+<<<<<<< HEAD
 #menu-secondary {
 	position: relative; }
+=======
+	.ltr .menu li li > ul:hover::before {
+		border-right-color: #f5f5f5; }
+
+	.rtl .menu li li > ul:hover::before {
+		border-left-color: #f5f5f5; }
+
+	#menu-primary li li a, #menu-secondary li li a {
+		border-color: #fff;
+		color: rgba(0, 0, 0, 0.75); 
+		background: #fff;
+		font-size: 0.85rem;}
+>>>>>>> 2573f9d... finishing the design
 
 #menu-secondary li a {
 	color: #fff; 
@@ -331,6 +413,7 @@ ul#menu-secondary-items {
 	font-weight: 400;
 	letter-spacing: 0.04em;}
 
+<<<<<<< HEAD
 #menu-primary {
 	position: relative;
 	z-index: 2; }
@@ -386,6 +469,26 @@ ul#menu-secondary-items {
 
 .menu li > a::after {
 	vertical-align: middle; }
+=======
+	#menu-primary .search-form .search-toggle::before {
+		font-size: 1.3rem; }
+	}
+
+#menu-primary li a, #menu-secondary li a {
+	font-size: 1rem;
+	font-weight: 500; 
+	text-transform: capitalize;}
+
+#container > .wrap {
+	border-radius: 2px;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
+
+h2#site-description.font-primary {
+	opacity: 1;
+	color: #9e9e9e;
+	font-weight: 500;
+	font-style: normal; }
+>>>>>>> 2573f9d... finishing the design
 
 .widget-title > .wrap, #comments-number > .wrap, #reply-title > .wrap, .attachment-meta-title > .wrap, dt, dt.font-secondary {
 	font-weight: 400; }
@@ -474,6 +577,7 @@ html {
 	font-weight: 300;
 	line-height: 1;}
 
+<<<<<<< HEAD
 .widget-title {
 	margin-bottom: 0; }
 
@@ -487,6 +591,12 @@ html {
 
 #menu-primary .search-form .search-toggle::before {
 	font-size: 22px; }
+=======
+#footer {
+	color: rgba(255, 255, 255, 0.75); }
+#footer a {
+	font-weight: 500; }
+>>>>>>> 2573f9d... finishing the design
 
 .menu input[type=search] {
 	border: 0;
@@ -497,6 +607,7 @@ html {
 	border-bottom: 2px solid #3f51b5; 
 	background: none;}
 
+<<<<<<< HEAD
 .breadcrumbs {
 	border-radius: 2px; 
 	background-color: #eee;}
@@ -533,3 +644,27 @@ html {
 
 h1, h2, hr, code, pre, .form-allowed-tags code, fieldset, legend, input, select, textarea, .gallery .gallery-icon a img, .avatar, .display-header-text #header, .entry, .format-chat .chat-author, .media-info li, .wp-playlist-tracks, .wp-playlist-item, .loop-description, .loop-pagination, .loop-nav, #sidebar-subsidiary, li.ping, .comment-content, .clean-my-archives .day-duplicate .day, .whistles-tabs-nav li a, .whistles-tabs .whistles-tabs-nav li a:hover, .whistles-tabs .whistles-tabs-nav li a:focus, .whistles-tabs .whistles-tabs-wrap, .whistles-toggle .whistle-title, .whistles-accordion .whistle-title, .whistles-toggle .whistle-content, .whistles-accordion .whistle-content {
 	border-color: #eee; }
+=======
+#menu-primary .search-form .search-toggle {
+	position: relative;
+	width: 45px;
+	height: 45px;
+	margin-top: -5px;
+	margin-right: -6px;
+	border-radius: 50%; }
+
+#menu-primary .search-form .search-toggle, input[type="submit"], input[type="reset"], input[type="button"], button, .page-links a, .comment-reply-link, .comment-reply-login, .wp-calendar td.has-posts a, #menu-sub-terms li a {
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); }
+#menu-primary .search-form .search-toggle:hover, #menu-primary .search-form .search-toggle:focus, input[type="submit"]:hover, input[type="submit"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="button"]:hover, input[type="button"]:focus, button:hover, button:focus, .page-links a:hover, .page-links a:focus, .comment-reply-link:hover, .comment-reply-link:focus, .comment-reply-login:hover, .comment-reply-login:focus, .wp-calendar td.has-posts a:hover, .wp-calendar td.has-posts a:focus, #menu-sub-terms li a:hover, #menu-sub-terms li a:focus {
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
+	text-decoration: none; }
+
+.comment-reply-link, .comment-reply-login {
+	border-radius: 0 0 2px 2px; }
+
+.entry-content a, .entry-summary a, .comment-content a {
+	border: 0; }
+
+form label {
+	cursor: default; }
+>>>>>>> 2573f9d... finishing the design
