@@ -10,10 +10,8 @@
  * You should have received a copy of the GNU General Public License along with this program; if not, write 
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
-
 /* Add the child theme setup function to the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'material_gaze_theme_setup' );
-
 /**
  * Setup function.  All child themes should run their setup within this function.  The idea is to add/remove 
  * filters and actions after the parent theme has been set up.  This function provides you that opportunity.
@@ -23,7 +21,6 @@ add_action( 'after_setup_theme', 'material_gaze_theme_setup' );
  * @return void
  */
 function material_gaze_theme_setup() {
-
 	/* Add a custom background to overwrite the defaults. */
 	add_theme_support(
 		'custom-background',
@@ -32,18 +29,16 @@ function material_gaze_theme_setup() {
 			'default-image' => '',
 		)
 	);
-
 	/* Add a custom header to overwrite the defaults. */
 	add_theme_support( 
 		'custom-header', 
 		array(
-			'default-text-color' => '212121',
+			'default-text-color' => 'ffffff',
 			'default-image'      => '%2$s/images/headers/blue.jpg',
 			'random-default'     => false,
+			'wp-head-callback'   => 'mg_custom_header_wp_head',
 		)
 	);
-
-
 	/* Register default headers. */
 	register_default_headers(
 		array(
@@ -65,19 +60,14 @@ function material_gaze_theme_setup() {
 		)
 	);
 	/* Custom editor stylesheet. */
-	add_editor_style( '//fonts.googleapis.com/css?family=RobotoDraft' );
-
-
+	add_editor_style( '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,700|Roboto+Condensed:400,300,700' );
 	/* Filter to add custom default backgrounds (supported by the framework). */
 	add_filter( 'hybrid_default_backgrounds', 'material_gaze_default_backgrounds' );
-
 	/* Add a custom default color for the "primary" color option. */
 	add_filter( 'theme_mod_color_primary', 'material_gaze_color_primary' );
-
 	/* Load stylesheets. */
 	add_action( 'wp_enqueue_scripts', 'material_gaze_enqueue_styles', 0 );
 }
-
 /**
  * Registers custom default backgrounds.
  *
@@ -87,7 +77,6 @@ function material_gaze_theme_setup() {
  * @return array
  */
 function material_gaze_default_backgrounds( $backgrounds ) {
-
 	$new_backgrounds = array(
 		'gray-square' => array(
 			'url'           => '%2$s/images/backgrounds/gray-square.png',
@@ -98,12 +87,8 @@ function material_gaze_default_backgrounds( $backgrounds ) {
 			'thumbnail_url' => '%2$s/images/backgrounds/blue-square-thumb.png',
 		),
 	);
-
 	return array_merge( $new_backgrounds, $backgrounds );
 }
-
-
-
 /**
  * Add a default custom color for the theme's "primary" color option.
  *
@@ -113,23 +98,31 @@ function material_gaze_default_backgrounds( $backgrounds ) {
  * @return string
  */
 function material_gaze_color_primary( $hex ) {
-	return $hex ? $hex : '00bcd4';
+	return $hex ? $hex : '2196F3';
 }
-
-
 function material_gaze_enqueue_styles() {
-	wp_enqueue_style( 'material-gaze-fonts', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500,400italic,700italic' );
+	wp_enqueue_style( 'material-gaze-fonts', '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,700|Roboto+Condensed:400,300,700' );
 }
-
-
 add_action( 'wp_head', 'material_gaze_wp_head' );
-
 function material_gaze_wp_head() {
-
 	$style = '';
 	$hex = get_theme_mod( 'color_primary', '' );
-
-	$style .= "#menu-primary .search-form .search-toggle { background: #{$hex}; } ";
-
+	$style .= "#menu-primary .search-form .search-toggle, .display-header-text #header { background: #{$hex}; } ";
 	echo "\n" . '<style type="text/css">' . trim( $style ) . '</style>' . "\n";
 }
+function mg_custom_header_wp_head() {
+	if ( !display_header_text() )
+		return;
+	$hex = get_header_textcolor();
+	if ( empty( $hex ) )
+		return;
+	$style = "body.custom-header #branding, #site-title { color: #{$hex}; }";
+	echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
+}
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+function mg_customize_preview_js() {
+	wp_enqueue_script( 'mg_customizer', trailingslashit( CHILD_THEME_URI ) .  'js/customizer.js', array( 'customize-preview' ), '20130508', true );
+}
+add_action( 'customize_preview_init', 'mg_customize_preview_js' );
