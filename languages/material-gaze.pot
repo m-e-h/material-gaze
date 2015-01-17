@@ -22,13 +22,9 @@ msgid "http://themehybrid.com/themes/material-gaze"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "A clean and minimal child theme for the <a href=\"http://wordpress.org/themes/stargazer\">Stargazer</a> parent theme. This child theme takes inspiration from Google's Material Design to transform how its parent theme looks.  It offers an alternative color scheme and comes packaged with additional backgrounds to use with the WordPress custom background feature."
+msgid "A clean and minimal child theme for the <a href=\"http://wordpress.org/themes/stargazer\">Stargazer</a> parent theme. This child theme takes inspiration from Google's Material Design to transform how it's parent theme looks.  It offers an alternative color scheme and comes packaged with additional headers to use with the WordPress custom header feature."
 msgstr ""
 
 #. Author of the plugin/theme
 msgid "Marty Helmick"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://themehybrid.com"
 msgstr ""
