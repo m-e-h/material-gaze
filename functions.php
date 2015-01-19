@@ -47,6 +47,11 @@ function material_gaze_theme_setup() {
 				'thumbnail_url' => '%2$s/images/headers/blue-thumb.jpg',
 				'description'   => __( 'default', 'material-gaze' )
 			),
+			'trees' => array(
+				'url'           => '%2$s/images/headers/trees.jpg',
+				'thumbnail_url' => '%2$s/images/headers/trees-thumb.jpg',
+				'description'   => __( 'trees', 'material-gaze' )
+			),
 			'red' => array(
 				'url'           => '%2$s/images/headers/red.jpg',
 				'thumbnail_url' => '%2$s/images/headers/red-thumb.jpg',
@@ -108,6 +113,8 @@ function material_gaze_wp_head() {
 	$style = '';
 	$hex = get_theme_mod( 'color_primary', '' );
 	$style .= "#menu-primary .search-form .search-toggle, .display-header-text #header { background: #{$hex}; } ";
+	$style .= "input[type='date']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='email']:focus, input[type='month']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='time']:focus, input[type='url']:focus, input[type='week']:focus,
+textarea:focus, select:focus { border-bottom-color: #{$hex}; box-shadow: 0 1px 0 0 #{$hex}; } ";
 	echo "\n" . '<style type="text/css">' . trim( $style ) . '</style>' . "\n";
 }
 function mg_custom_header_wp_head() {

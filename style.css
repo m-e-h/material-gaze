@@ -11,7 +11,18 @@ Text Domain:    Material Gaze
 Tags:           blue, light, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready
 Template:       stargazer
 */
-
+/**
+ * 2.1 - Font Family Definitions
+ *
+ * This theme operates with three dinstinct font rules.  The "primary" font is used for the majority of 
+ * text throughout the theme.  The "secondary" font is used for handling secondary use cases.  The 
+ * "headlines" font is specific to h1-h6 headers (with the exception of #site-description).
+ *
+ * If building a child theme for public release with custom fonts, the child theme should define only the 
+ * font rules it needs.  Copy the specific section below that you want to overwrite into the child theme. 
+ * Make sure to include the `.font-*` class as this will maintain forward compatibility with future 
+ * changes in the parent theme.
+ */
 /* ====== Primary Font ====== */
 .font-primary,
 .menu.font-secondary,
@@ -183,7 +194,7 @@ body.custom-colors {
 }
 
 .sub-menu {
-    padding: 3px 0;
+    padding: 4px 0;
     border-radius: 2px; 
     background: #fff;
 }
@@ -204,15 +215,24 @@ body.custom-colors {
     #menu-secondary .menu-toggle button {
         padding: 0.5rem 0.75rem 0.5rem 0;
         border-color: transparent;
-        border-radius: 2px solid; 
-        color: rgba(33, 33, 33, 0.75);
+        border-radius: 2px; 
+        color: rgba(255, 255, 255, 0);
         background: rgba(255, 255, 255, 0.5);
         font-size: 0;
     }
-    #menu-secondary .menu-toggle button:hover,
-    #menu-secondary .menu-toggle button:focus,
-    #menu-secondary .menu-toggle button:active {
-        background: #fff;
+    #menu-secondary .menu-toggle button:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    #menu-secondary .menu-toggle button:focus {
+        outline: 0; 
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    #menu-secondary .menu-toggle button.active {
+        border-radius: 2px 2px 0 0; 
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    #menu-secondary .menu-toggle button:after {
+        color: rgba(33, 33, 33, 0.75) !important;
     }
 
     .wrap .menu-items {
@@ -242,7 +262,7 @@ body.custom-colors {
     #menu-primary li li a:focus,
     #menu-secondary li li a:focus {
         color: #212121;
-        background: #e0e0e0;
+        background: #eee;
     }
 }
 
@@ -265,10 +285,10 @@ body.custom-colors {
 li.ping,
 .comment-content,
 .loop-description {
-    border-color: #e0e0e0;
-    border-radius: 2px; 
-    color: #212121;
-    background: #e0e0e0;
+    border-color: #fafafa;
+    border-radius: 2px;
+    background: #fafafa;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 }
 
 label:focus,
@@ -278,8 +298,9 @@ label.focus {
 
 blockquote {
     border-color: transparent;
-    border-radius: 2px; 
+    border-radius: 2px;
     outline: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
 }
 
 /* Menu colors */
@@ -316,7 +337,7 @@ blockquote {
     #menu-primary ul ul li a:focus,
     #menu-secondary ul ul li a:focus {
         color: #212121;
-        background: #e0e0e0;
+        background: #eee;
     }
 
     #menu-primary .search-form .search-toggle::before {
@@ -355,6 +376,17 @@ form label {
     cursor: default;
 }
 
+.widget-title,
+#comments-number,
+#reply-title,
+.attachment-meta-title {
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+    border: 0;
+    border-radius: 2px; 
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+
 .attachment-meta-title > .wrap,
 #comments-number > .wrap,
 #reply-title > .wrap,
@@ -362,7 +394,7 @@ form label {
     box-sizing: border-box;
     width: 100%;
     padding: 1rem 1rem 0.925rem;
-    border-radius: 2px 2px 0 0; 
+    border-radius: 2px; 
     font-size: 1.3rem;
     font-weight: 300;
     text-transform: capitalize;
@@ -439,4 +471,63 @@ button:focus,
     padding-left: 10px;
     font-size: 1.5rem;
     line-height: 0.8;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    border-radius: 2px;
+    font-weight: 400;
+    letter-spacing: 0.04em; 
+    text-transform: uppercase;
+}
+
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+    border-top: 0;
+    border-right: 0;
+    border-bottom-color: #616161;
+    border-left: 0;
+    border-radius: 2px 2px 0 0; 
+    background: #fafafa;
+}
+
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+textarea:focus,
+select:focus {
+    background: #fafafa;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.mejs-controls button {
+    box-shadow: none;
 }
