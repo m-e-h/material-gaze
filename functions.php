@@ -47,20 +47,10 @@ function material_gaze_theme_setup() {
 				'thumbnail_url' => '%2$s/images/headers/blue-thumb.jpg',
 				'description'   => __( 'default', 'material-gaze' )
 			),
-			'trees' => array(
-				'url'           => '%2$s/images/headers/trees.jpg',
-				'thumbnail_url' => '%2$s/images/headers/trees-thumb.jpg',
-				'description'   => __( 'trees', 'material-gaze' )
-			),
 			'red' => array(
 				'url'           => '%2$s/images/headers/red.jpg',
 				'thumbnail_url' => '%2$s/images/headers/red-thumb.jpg',
 				'description'   => __( 'red', 'material-gaze' )
-			),
-			'pyramid' => array(
-				'url'           => '%2$s/images/headers/pyramid.jpg',
-				'thumbnail_url' => '%2$s/images/headers/pyramid-thumb.jpg',
-				'description'   => __( 'pyramid', 'material-gaze' )
 			),
 		)
 	);
