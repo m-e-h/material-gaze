@@ -19,6 +19,8 @@
 
 			<header <?php hybrid_attr( 'header' ); ?>>
 
+				<?php if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); // If user chooses to display site logo. By first087 (https://github.com/first087) ?>
+
 				<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
 
 					<div id="branding">
