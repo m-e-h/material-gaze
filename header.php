@@ -10,7 +10,7 @@
 	<div id="container">
 
 		<div class="skip-link">
-			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'stargazer' ); ?></a>
+			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'material-gaze' ); ?></a>
 		</div><!-- .skip-link -->
 
 		<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
