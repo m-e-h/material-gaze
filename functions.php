@@ -44,6 +44,15 @@ function material_gaze_theme_setup() {
 		)
 	);
 
+	/* Add Site Logo. By first087 (https://github.com/first087) */
+	// Declare theme support for Site Logo.
+	add_theme_support( 'site-logo', array(
+		'header-text' => array(
+			'site-title',
+			'site-description',
+		),
+	) );
+
 	/* Register default headers. */
 	register_default_headers(
 		array(
