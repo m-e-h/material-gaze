@@ -62,8 +62,6 @@ function material_gaze_theme_setup() {
 
 	/* Custom editor stylesheet. */
 	add_editor_style( '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,700|Roboto+Condensed:400,300,700' );
-	/* Filter to add custom default backgrounds (supported by the framework). */
-	add_filter( 'hybrid_default_backgrounds', 'material_gaze_default_backgrounds' );
 	/* Add a custom default color for the "primary" color option. */
 	add_filter( 'theme_mod_color_primary', 'material_gaze_color_primary' );
 	/* Load stylesheets. */
