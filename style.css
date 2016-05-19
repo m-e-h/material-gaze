@@ -190,7 +190,7 @@ body.custom-colors {
     background: #fff;
 }
 
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 1024px) {
     #menu-primary li.current-menu-item > a {
         color: #424242;
     }
@@ -207,7 +207,6 @@ body.custom-colors {
         padding: 0.5rem 0.75rem 0.5rem 0;
         border-color: transparent;
         border-radius: 2px;
-        color: rgba(255, 255, 255, 0);
         background: rgba(255, 255, 255, 0.5);
         font-size: 0;
     }

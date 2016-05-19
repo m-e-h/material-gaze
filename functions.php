@@ -50,12 +50,12 @@ function material_gaze_theme_setup() {
 			'blue' => array(
 				'url'           => '%2$s/images/headers/blue.jpg',
 				'thumbnail_url' => '%2$s/images/headers/blue-thumb.jpg',
-				'description'   => __( 'default', 'material-gaze' )
+				'description'   => __( 'default', 'material-gaze' ),
 			),
 			'red' => array(
 				'url'           => '%2$s/images/headers/red.jpg',
 				'thumbnail_url' => '%2$s/images/headers/red-thumb.jpg',
-				'description'   => __( 'red', 'material-gaze' )
+				'description'   => __( 'red', 'material-gaze' ),
 			),
 		)
 	);
@@ -95,7 +95,7 @@ textarea:focus, select:focus { border-bottom-color: #{$hex}; box-shadow: 0 1px 0
 }
 
 function material_gaze_custom_header_wp_head() {
-	if ( !display_header_text() )
+	if ( ! display_header_text() )
 		return;
 	$hex = get_header_textcolor();
 	if ( empty( $hex ) )
@@ -108,7 +108,7 @@ function material_gaze_custom_header_wp_head() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function material_gaze_customize_preview_js() {
-	wp_enqueue_script( 'material_gaze_customizer', trailingslashit( CHILD_THEME_URI ) .  'js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_enqueue_script( 'material_gaze_customizer', trailingslashit( get_stylesheet_directory_uri() ) .  'js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 
 add_action( 'customize_preview_init', 'material_gaze_customize_preview_js' );
